@@ -1,0 +1,101 @@
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/nav-black.css');
+}
+?>
+==
+<!doctype html>
+
+<!--[if lt IE 9]>
+    <html class="ie8">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+    <!--<![endif]-->
+    
+    {% partial "head" %}
+    
+    <body class="hidden">
+        <header id="main_header" class="no_select">
+            <nav id="big_nav">
+                <ul>
+                    <li>
+                        <a href="{{ 'home'|page }}">Orion</a>
+                    </li><li>
+                        <a href="{{ 'news'|page }}">News</a>
+                    </li><li class="logo">
+                        {% partial "big_scout_lily" %}
+                    </li><li>
+                        <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                    </li><li>
+                        <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>           
+        </header>
+        
+        {% placeholder pageTop %}
+        
+        <div id="main-container">
+            {% page %}
+        </div>
+        
+        <div id="footer">
+            <div id="footer_top">
+                <div class="footer_top_element left">
+                    <h3>Übersicht</h3>
+                    <ul>
+                        <li>
+                            <a href="{{ 'home'|page }}">Hauptseite</a>
+                        </li>
+                        <li>
+                            <a href="{{ 'news'|page }}">News</a>
+                            <ul>
+                                <li style="margin: 0 0 0 10px;list-style-type: disc;"><a href="{{ 'news/kalender'|page }}">Kalender</a></li>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'news/downloads'|page }}">Downloads</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                            <ul>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'pfadiheim/belegung'|page }}">Belegungsplan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_top_element middle">
+                        {% partial "small_scout_lily" %}
+                    <p>Allzeit Bereit!</p>
+                </div>
+                <div class="footer_top_element right">
+                    <h3>Nützliche Links</h3>
+                    <ul>
+                        <li>
+                            <a href="http://www.pfadiwinti.ch/">Pfadi Region Winterthur (PRW)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.pbs.ch/de/verband/">Pfadibewegung Schweiz (PBS)</a>
+                        </li>
+                    </ul>             
+                </div>
+            </div>
+            <div id="footer_bottom">
+                <div class="footer_bottom_element left">
+                    <a href="{{ 'kontakt/impressum'|page }}">Impressum</a>
+                </div>
+                <div class="footer_bottom_element middle">
+                    <p><a href="{{ 'home'|page }}">Pfadi Orion</a> © <?php echo date("Y"); ?></p>
+                </div>
+                <div class="footer_bottom_element right">
+                    <a href="{{ 'backend'|page }}">Login</a>
+                </div>
+            </div>
+        </div>
+        {% scripts %}
+    </body>
+</html>

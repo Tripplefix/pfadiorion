@@ -1,0 +1,56 @@
+title = "News"
+url = "/news"
+layout = "main"
+hidden = "0"
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/news.css');
+}
+?>
+==
+{% put pageTop %}
+    <script>
+        $(function() {
+            $('#top_image').parallax({
+                parallax: 0.6
+            });
+        });
+    </script>
+    <div id="top_image" class="parallax" data-image="{{ 'assets/images/sarasani.jpg'|theme }}" data-with="1600" data-height="1067" data-container-height="350" data-posy="400">
+        <div id="top_image_description">Abteilungs SoLa 2014</div>
+    </div>
+{% endput %}
+
+<div id="newsfeed">
+    <h1>Neuigkeiten aus der Abteilung</h1>
+    
+    <!-- load news -->
+    
+</div>
+
+<aside class="main_sidebar">
+    <section id="onlineanschlag" class="sidebarelement">
+        <h3>Nächste Pfadiübung</h3>
+        <ul> 
+            <!-- load notices -->
+        </ul>
+    </section><section class="sidebarelement">
+        <h3>Anstehende Events</h3>
+        <ul>
+            <!-- load events -->
+        </ul>
+        <a href="{{ 'news/kalender'|page }}"><input class="button" type="button" style="cursor: pointer; margin-top: 10px" value="Kalender" /></a>
+    </section><section class="sidebarelement">
+        <h3>Downloads</h3>
+        <!-- load downloads -->
+        <br /><a href="{{ 'news/downloads'|page }}"><input class="button" type="button" style="cursor: pointer; margin-top: 10px" value="Alle Downloads" /></a>
+
+    </section><section class="sidebarelement">
+        <h3>Informationen</h3>
+        <!-- load infos -->
+        <a href="{{ 'pfadiheim/belegung'|page }}"><input class="button" type="button" style="cursor: pointer; margin-top: 10px" value="Belegungsplan" /></a>
+
+    </section>
+</aside>
