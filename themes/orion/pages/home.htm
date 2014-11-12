@@ -143,10 +143,14 @@ function onStart()
                     <p>
                         Bei Fragen stehen dir unsere Trupp- und Abteilungsleiter gerne zur Verfügung.
                     </p>
-                    <a id="join_us_button" class="no_select" href="{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}">Anmelden</a>
+                    <!--<a id="join_us_button" class="no_select" href="{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}">Anmelden</a>
                     <div id="contact_us_button" class="no_select" onclick="(function() {
                                 window.location.href = "{{ 'kontakt'|page }}";
-                            })();">Kontakt</div>
+                            })();">Kontakt</div>-->
+                    
+                    <button id="join_us_button" onclick="(function() { window.location.href = "{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}"; })();">Anmelden</button> 
+                    <button id="contact_us_button" onclick="(function() { window.location.href = "{{ 'kontakt'|page }}"; })();">Kontakt</button>
+                    
                 </div>
             </section>
 

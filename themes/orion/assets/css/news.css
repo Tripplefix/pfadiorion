@@ -38,7 +38,13 @@
     margin: 20px 0;
 }
 
+.main_sidebar section{   
+    clear: both;
+}
 
+.main_sidebar button{
+    float: right;
+}
 
 .article{
     padding: 0 20px;
@@ -462,6 +468,7 @@ table#event_table tbody{
         display: inline-block;
         vertical-align: top;
         padding-right: 2%;
+        clear: both;
     }
 
     #newsfeed {

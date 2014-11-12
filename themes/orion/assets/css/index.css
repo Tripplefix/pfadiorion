@@ -268,23 +268,13 @@
 
 #join_us_button, #contact_us_button{
     width: 200px;
-    padding: 6px 15px; 
+    padding: 14px 15px;
+    height: initial;
     margin: 50px 124px;
-    text-align: center;
-    color: #FFF;
+    font-size: 22px;
     font-weight: bold;
-    font-size: 26px;
-    background-color: #CC3D18;
     border-radius: 5px;
-    cursor: pointer;
     display: inline-block;
-    transition: none;
-}
-#join_us_button:hover, #contact_us_button:hover{
-    background-color: #DA512D;
-    border-bottom: 4px solid #CC3D18;
-    padding-bottom: 2px;
-    text-decoration:none;
 }
 
 

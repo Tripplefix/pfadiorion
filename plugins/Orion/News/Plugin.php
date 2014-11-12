@@ -17,7 +17,26 @@ class Plugin extends \System\Classes\PluginBase
     public function registerComponents()
     {
         return [
-            'Orion\News\Components\Post' => 'blogPost'
+            'Orion\News\Components\NewsList' => 'newsList'
+        ];
+    }
+    
+    public function registerNavigation()
+    {
+        return [
+            'news' => [
+                'label'       => 'News',
+                'url'         => Backend::url('orion/news/posts'),
+                'icon'        => 'icon-pencil',
+                'permissions' => ['orion.news.*'],
+                'order'       => 500,
+            ]
+        ];
+    }
+    public function registerPermissions()
+    {
+        return [
+            'orion.news.access_posts'       => ['label' => 'Beiträge bearbeiten'],
         ];
     }
 }

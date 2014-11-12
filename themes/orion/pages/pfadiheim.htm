@@ -70,14 +70,14 @@ function onStart()
         </div>
     </div>
 
-    <div id="ph_details_button" class="no_select">
-        Details zum Heim
+    <div id="ph_details_button">
+        <button>Details zum Heim</button>
     </div>
 </div>
 
 <div id="google_maps_overlay" class="hidden">
     <div id="map-canvas"></div>
-    <div id="show_full_maps_button" class="no_select">Ganze Karte anzeigen</div>
+    <button id="show_full_maps_button">Ganze Karte anzeigen</button>
 </div>
 <div id="ph_info_wrapper">
     <div id="ph_location" class="ph_container ph_border">
@@ -162,7 +162,9 @@ function onStart()
             imgHeight: 933
         }).css({opacity: 1});
         
-        $('#ph_details_button').on("click", scrollToDetails);
+        $('#ph_top').height($(window).height() - 120);
+        
+        $('#ph_details_button button').on("click", scrollToDetails);
 
         $('#show_full_maps_button').on("click", function() {
 
@@ -213,13 +215,10 @@ function onStart()
 
     $(window).on({
         load: function() {
-            $('body').css({display: 'block'});
             initializeMap();
         },
         resize: function() {
-            $('#ph_top').css({
-                height: ($(window).height() - 120)
-            });
+            $('#ph_top').height($(window).height() - 120);
             if(!Orion.isMobile() && window.scrollY >= 600) scrollToDetails();
         }
     });
