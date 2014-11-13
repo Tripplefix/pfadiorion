@@ -1,8 +1,10 @@
-<?php
+<?php namespace Orion\News;
 
-namespace Acme\Blog;
+use Backend;
+use Controller;
+use System\Classes\PluginBase;
 
-class Plugin extends \System\Classes\PluginBase
+class Plugin extends PluginBase
 {
     public function pluginDetails()
     {

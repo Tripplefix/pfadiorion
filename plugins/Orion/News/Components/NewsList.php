@@ -1,8 +1,8 @@
-<?php
+<?php namespace Orion\News\Components;
 
-namespace Orion\BulletinBoard\Components;
+use Cms\Classes\ComponentBase;
 
-class NewsList extends Cms\Classes\ComponentBase {
+class NewsList extends ComponentBase {
     public function componentDetails()
     {
         return [

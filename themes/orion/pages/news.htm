@@ -2,6 +2,8 @@ title = "News"
 url = "/news"
 layout = "main"
 hidden = "0"
+
+[newsList]
 ==
 <?php
 function onStart()
@@ -26,7 +28,9 @@ function onStart()
 <div id="newsfeed">
     <h1>Neuigkeiten aus der Abteilung</h1>
     
-    <!-- load news -->
+    {% for post in newsList.news %}
+        <p>{{ post }}</p>
+    {% endfor %}
     
 </div>
 
