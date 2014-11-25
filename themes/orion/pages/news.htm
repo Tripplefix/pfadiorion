@@ -28,10 +28,7 @@ function onStart()
 <div id="newsfeed">
     <h1>Neuigkeiten aus der Abteilung</h1>
     
-    {% for post in newsList.news %}
-        <p>{{ post }}</p>
-    {% endfor %}
-    
+    {% component 'newsList' %}
 </div>
 
 <aside class="main_sidebar">
@@ -45,16 +42,16 @@ function onStart()
         <ul>
             <!-- load events -->
         </ul>
-        <a href="{{ 'news/kalender'|page }}"><button style="cursor: pointer; margin-top: 10px">Kalender</button></a>
+        <button class="small" onclick="window.location.href='{{ 'news/kalender'|page }}'">Kalender</button>
     </section><section class="sidebarelement">
         <h3>Downloads</h3>
         <!-- load downloads -->
-        <br /><a href="{{ 'news/downloads'|page }}"><button style="cursor: pointer; margin-top: 10px">Alle Downloads</button></a>
+        <button class="small" onclick="window.location.href='{{ 'news/downloads'|page }}'">Alle Downloads</button>
 
     </section><section class="sidebarelement">
         <h3>Informationen</h3>
         <!-- load infos -->
-        <a href="{{ 'pfadiheim/belegung'|page }}"><button style="cursor: pointer; margin-top: 10px">Belegungsplan</button></a>
+        <button class="small" onclick="window.location.href='{{ 'pfadiheim/belegung'|page }}'">Belegungsplan</button>
 
     </section>
 </aside>
