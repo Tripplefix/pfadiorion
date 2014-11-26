@@ -3,7 +3,7 @@
 use Cms\Classes\ComponentBase;
 use DB;
 
-class NewsList extends ComponentBase {
+class Posts extends ComponentBase {
     /**
      * A collection of posts to display
      * @var Collection
@@ -20,18 +20,6 @@ class NewsList extends ComponentBase {
     
     public function onRun()
     {
-        $this->posts = $this->page['posts'] = DB::table('orion_news_posts')->get();
+        $this->posts = $this->page['posts'] = DB::table('orion_news_posts')->get(); 
     }
-    
-    /*public function news(){
-        $posts = DB::table('orion_news_posts')->get();
-
-        $result = [];
-        foreach ($posts as $post)
-        {
-            array_push($result, $post->content);
-        }
-        
-        return $result;
-    }*/
 }

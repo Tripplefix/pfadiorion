@@ -1,8 +1,27 @@
 <?php namespace Orion\News\Controllers;
 
-class Posts extends \Backend\Classes\Controller {
+use BackendMenu;
+use Backend\Classes\Controller;
 
-    public index()   
+class Posts extends Controller {
+    
+    //public $implement = ['Backend.Behaviors.FormController'];
+
+    //public $formConfig = 'form_config.yaml';
+    
+    public function __construct()
+    {
+        parent::__construct();
+
+        BackendMenu::setContext('Orion.News', 'news', 'posts');
+    }
+    
+    public function index()
+    {
+        
+    }
+    
+    public function create()
     {
         
     }

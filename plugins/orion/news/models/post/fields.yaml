@@ -1,0 +1,47 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+  title:
+    label: Title
+    span: left
+    placeholder: New post title
+
+secondaryTabs:
+  stretch: true
+  fields:
+    content:
+      tab: Edit
+      stretch: true
+      span: left
+      cssClass: no-padding
+      type: codeeditor
+      language: markdown
+      showGutter: false
+      wrapWords: true
+      fontSize: 13
+      margin: 15
+      
+    published:
+      tab: Manage
+      label: Published
+      span: left
+      type: checkbox
+
+    published_at:
+      tab: Manage
+      label: Published on
+      span: left
+      cssClass: checkbox-align
+      type: datepicker
+      mode: date
+      
+    featured_images:
+      tab: Manage
+      label: Featured Images
+      type: fileupload
+      mode: image
+      imageWidth: 200
+      imageHeight: 200

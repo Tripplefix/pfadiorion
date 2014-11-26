@@ -3,7 +3,7 @@ url = "/news"
 layout = "main"
 hidden = "0"
 
-[newsList]
+[posts]
 ==
 <?php
 function onStart()
@@ -28,7 +28,7 @@ function onStart()
 <div id="newsfeed">
     <h1>Neuigkeiten aus der Abteilung</h1>
     
-    {% component 'newsList' %}
+    {% component 'posts' %}
 </div>
 
 <aside class="main_sidebar">
