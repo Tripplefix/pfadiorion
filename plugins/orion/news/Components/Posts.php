@@ -1,8 +1,15 @@
 <?php namespace Orion\News\Components;
 
 use Cms\Classes\ComponentBase;
+use DB;
 
-class NewsList extends ComponentBase {
+class Posts extends ComponentBase {
+    /**
+     * A collection of posts to display
+     * @var Collection
+     */
+    public $posts;
+    
     public function componentDetails()
     {
         return [
@@ -11,7 +18,8 @@ class NewsList extends ComponentBase {
         ];
     }
     
-    public function news(){
-        return ['news1', 'news2'];
+    public function onRun()
+    {
+        $this->posts = $this->page['posts'] = DB::table('orion_news_posts')->get(); 
     }
 }

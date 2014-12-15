@@ -19,7 +19,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Orion\News\Components\NewsList' => 'newsList'
+            'Orion\News\Components\Posts' => 'posts'
         ];
     }
     

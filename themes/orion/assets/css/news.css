@@ -38,6 +38,12 @@
     margin: 20px 0;
 }
 
+#newsfeed li{
+    list-style: none;
+    margin-bottom: 100px;
+    margin-left: 25px;
+}
+
 .main_sidebar section{   
     clear: both;
 }

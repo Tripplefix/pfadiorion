@@ -4,12 +4,11 @@
 */
 
 #main_header, .parallax-container{
-    min-height: 680px;
+    min-height: 550px;
 }
 
 #top_title{
     width: 100%;
-    min-width: 970px;
     position: relative;
     top: 28%;
 }
@@ -320,8 +319,38 @@
     }
 }
 
+@media screen and (max-width: 1024px) and (min-width: 640px){
+    #top_title h1 {
+        font-size: 100px;
+    }
+
+    #orion_location p {
+        font-size: 25px;
+    }
+
+    #orion_location {
+        background-size: 21px;
+        width: 396px;
+        margin-left: calc(50% - 277px);
+    }
+
+    #top_title h2 {
+        font-size: 30px;
+        margin: 60px 0 10px 0;
+    }
+    
+    #big_nav a:link, #big_nav a:visited {
+        width: 80px;
+        padding: 2.5em 1em 1em 1em;
+    }
+}
+
 /*@media screen and (max-width: 960px), screen and (-webkit-min-device-pixel-ratio: 2.0) and (max-width: 1920px), screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1920px){*/
 @media screen and (max-width: 640px){
+    #big_nav, #small_nav{
+        display: none;
+    }
+    
     #main-container section{
         width: 100%;
         height: auto;

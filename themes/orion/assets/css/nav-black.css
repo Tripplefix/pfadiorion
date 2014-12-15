@@ -31,3 +31,10 @@
 #main_scout_lily:hover{
     fill: #CC3D18 !important;
 }
+
+@media screen and (max-width: 1024px) and (min-width: 640px){
+    #big_nav a:link, #big_nav a:visited {
+        width: 80px;
+        padding: 2.5em 1em 1em 1em;
+    }
+}

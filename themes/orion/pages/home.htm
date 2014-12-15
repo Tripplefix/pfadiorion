@@ -148,8 +148,8 @@ function onStart()
                                 window.location.href = "{{ 'kontakt'|page }}";
                             })();">Kontakt</div>-->
                     
-                    <button id="join_us_button" onclick="(function() { window.location.href = "{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}"; })();">Anmelden</button> 
-                    <button id="contact_us_button" onclick="(function() { window.location.href = "{{ 'kontakt'|page }}"; })();">Kontakt</button>
+                    <button id="join_us_button" onclick="window.location.href = '{{ 'assets/download/Anmeldeformular_Pfadi_Orion.pdf'|theme }}'">Anmelden</button> 
+                    <button id="contact_us_button" onclick="window.location.href = '{{ 'kontakt'|page }}'">Kontakt</button>
                     
                 </div>
             </section>
@@ -257,11 +257,8 @@ function onStart()
             $(window).on('resize', function() {
                 winHeight = $(window).height();
                 
-                $('#main_header')
-                    .height(winHeight)
-                    .data('container-height', winHeight);
-                
-                $('.parallax_container').height(winHeight);
+                $('#main_header').data('container-height', winHeight);                
+                $('#main_header, .parallax-container').height(winHeight);
             });
         
             function organigramm() {
