@@ -1,16 +1,9 @@
-<?php
+<?php namespace Orion\News\Models;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+use Model;
 
-/**
- * Description of NewsList
- *
- * @author isler
- */
-class NewsList {
-    //put your code here
+class NewsList extends Model {
+
+    protected $table = 'orion_news_posts';
+    
 }
