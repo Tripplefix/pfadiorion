@@ -338,7 +338,7 @@
         font-size: 30px;
         margin: 60px 0 10px 0;
     }
-    
+
     #big_nav a:link, #big_nav a:visited {
         width: 80px;
         padding: 2.5em 1em 1em 1em;
@@ -350,7 +350,42 @@
     #big_nav, #small_nav{
         display: none;
     }
-    
+
+
+
+    #top_title {
+        width: 100%;
+        position: relative;
+        top: 28%;
+    }
+
+    #top_title h1 {
+        font-size: 75px;
+    }
+
+    #orion_location p {
+        font-size: 20px;
+    }
+
+    #orion_location {
+        background-size: 21px;
+        width: 430px;
+        margin-left: calc(50% - 220px);
+    }
+
+    #top_title h2 {
+        font-size: 30px;
+        margin: 60px 0 10px 0;
+    }
+
+    #big_nav a:link, #big_nav a:visited {
+        width: 80px;
+        padding: 2.5em 1em 1em 1em;
+    }
+
+
+
+
     #main-container section{
         width: 100%;
         height: auto;
@@ -372,9 +407,6 @@
         font-size: 40px;
     }
 
-    #main_header{
-        display: none;
-    }
     .parallax-container{
         display: none;
     }
@@ -418,16 +450,32 @@
     }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2.0) and (max-width: 1920px){
-
-    #main-container section{
-        height: auto;
+@media screen and (max-width: 360px){
+    #main_header{
+        max-height: 475px;
+        background-image: url('../../assets/images/orion_title_mobile.jpg');
+        background-size: 200%;
+        background-repeat: no-repeat;
+        background-position: center 50px;
     }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 1.5){
-    /*#main-container *{
-        font-size: 14px;
-    }*/
-
+    #top_title {
+        top: 130px;
+    }
+    #top_title h1 {
+        font-size: 50px;
+    }
+    #orion_location{
+        background-size: 16px;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+        background-position-x: 30px;
+    }
+    #orion_location p {
+        font-size: 18px;
+    }
+    #top_title h2 {
+        font-size: 24px;
+        margin: 60px 0 14px 0;
+    }
 }

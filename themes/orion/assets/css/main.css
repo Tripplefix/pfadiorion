@@ -210,7 +210,10 @@ button:active {
     font-weight: bold;
     border-bottom: 1px solid #E4E4E4;
     text-align: center;
-}		
+}
+#tablet_nav a:nth-child(even){
+    border-left: 1px solid #E4E4E4;
+}
 #tablet_nav a:hover{
     background-color: rgb(230, 230, 230);
 }		
@@ -223,14 +226,14 @@ button:active {
 }
 
 #tablet_nav_toggle{
-    height: 75px;
+    height: 55px;
     width: 100%;
 }
 
 #tablet_nav_toggle svg{
-    width: 50px;
-    margin-top: 10px;
-    margin-left: 20px;
+    width: 36px;
+    margin-top: 2px;
+    margin-left: 15px;
 }
 
 

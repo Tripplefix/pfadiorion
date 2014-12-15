@@ -55,6 +55,7 @@ function onStart()
                     </li>
                 </ul>
             </nav> 
+            {% partial "tablet_nav" %}
 
             <div id="top_title">
                 <h1>Pfadi Orion</h1>
@@ -257,8 +258,11 @@ function onStart()
             $(window).on('resize', function() {
                 winHeight = $(window).height();
                 
-                $('#main_header').data('container-height', winHeight);                
-                $('#main_header, .parallax-container').height(winHeight);
+                if($(window).width() > 360){
+                    console.log("test");
+                    $('#main_header').data('container-height', winHeight);                
+                    $('#main_header, .parallax-container').height(winHeight);
+                }
             });
         
             function organigramm() {
