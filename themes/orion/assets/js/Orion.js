@@ -61,15 +61,6 @@ var Orion = (function() {
 
         function setNav() {
             winHeight = window.innerHeight;
-            if(mobile || window.innerWidth <= 640) {                
-                if(smallNav) smallNav.style.display = 'none';
-                if(tabletNav) tabletNav.style.display = 'block';
-                bigNav.style.display = 'none';
-            } else {                
-                if(smallNav) smallNav.style.display = 'block';
-                if(tabletNav) tabletNav.style.display = 'none';
-                bigNav.style.display = 'block';
-            }
         }
     }
 

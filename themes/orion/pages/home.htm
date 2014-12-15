@@ -257,11 +257,8 @@ function onStart()
             $(window).on('resize', function() {
                 winHeight = $(window).height();
                 
-                $('#main_header')
-                    .height(winHeight)
-                    .data('container-height', winHeight);
-                
-                $('.parallax_container').height(winHeight);
+                $('#main_header').data('container-height', winHeight);                
+                $('#main_header, .parallax-container').height(winHeight);
             });
         
             function organigramm() {
