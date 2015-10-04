@@ -1,0 +1,110 @@
+1443979387s:3875:"a:6:{s:5:"mtime";i:1443978776;s:7:"content";s:1823:"title = "News"
+url = "/news"
+layout = "main"
+is_hidden = "0"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = "10"
+noPostsMessage = "Kein Artikel gefunden"
+sortOrder = "published_at desc"
+categoryPage = "news"
+postPage = "news"
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/news.css');
+}
+?>
+==
+{% put pageTop %}
+    <script>
+        $(function() {
+            $('#top_image').parallax({
+                parallax: 0.6
+            });
+        });
+    </script>
+    <div id="top_image" class="parallax" data-image="{{ 'assets/images/sarasani.jpg'|theme }}" data-with="1600" data-height="1067" data-container-height="350" data-posy="400">
+        <div id="top_image_description">Abteilungs SoLa 2014</div>
+    </div>
+{% endput %}
+
+<div id="newsfeed">
+    <h1>Neuigkeiten aus der Abteilung</h1>
+    {% component 'blogPosts' %}
+    
+</div>
+
+<aside class="main_sidebar">
+    <section id="onlineanschlag" class="sidebarelement">
+        <h3>Nächste Pfadiübung</h3>
+        <ul> 
+            <!-- load notices -->
+        </ul>
+    </section><section class="sidebarelement">
+        <h3>Anstehende Events</h3>
+        <ul>
+            <!-- load events -->
+        </ul>
+        <button class="small" onclick="window.location.href='{{ 'news/kalender'|page }}'">Kalender</button>
+    </section><section class="sidebarelement">
+        <h3>Downloads</h3>
+        <!-- load downloads -->
+        <button class="small" onclick="window.location.href='{{ 'news/downloads'|page }}'">Alle Downloads</button>
+
+    </section><section class="sidebarelement">
+        <h3>Informationen</h3>
+        <!-- load infos -->
+        <button class="small" onclick="window.location.href='{{ 'pfadiheim/belegung'|page }}'">Belegungsplan</button>
+
+    </section>
+</aside>";s:7:"viewBag";a:0:{}s:8:"settings";a:5:{s:5:"title";s:4:"News";s:3:"url";s:5:"/news";s:6:"layout";s:4:"main";s:9:"is_hidden";s:1:"0";s:10:"components";a:1:{s:9:"blogPosts";a:6:{s:10:"pageNumber";s:11:"{{ :page }}";s:12:"postsPerPage";s:2:"10";s:14:"noPostsMessage";s:21:"Kein Artikel gefunden";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:4:"news";s:8:"postPage";s:4:"news";}}}s:4:"code";s:71:"
+function onStart()
+{
+    $this->addCss('assets/css/news.css');
+}
+";s:6:"markup";s:1489:"{% put pageTop %}
+    <script>
+        $(function() {
+            $('#top_image').parallax({
+                parallax: 0.6
+            });
+        });
+    </script>
+    <div id="top_image" class="parallax" data-image="{{ 'assets/images/sarasani.jpg'|theme }}" data-with="1600" data-height="1067" data-container-height="350" data-posy="400">
+        <div id="top_image_description">Abteilungs SoLa 2014</div>
+    </div>
+{% endput %}
+
+<div id="newsfeed">
+    <h1>Neuigkeiten aus der Abteilung</h1>
+    {% component 'blogPosts' %}
+    
+</div>
+
+<aside class="main_sidebar">
+    <section id="onlineanschlag" class="sidebarelement">
+        <h3>Nächste Pfadiübung</h3>
+        <ul> 
+            <!-- load notices -->
+        </ul>
+    </section><section class="sidebarelement">
+        <h3>Anstehende Events</h3>
+        <ul>
+            <!-- load events -->
+        </ul>
+        <button class="small" onclick="window.location.href='{{ 'news/kalender'|page }}'">Kalender</button>
+    </section><section class="sidebarelement">
+        <h3>Downloads</h3>
+        <!-- load downloads -->
+        <button class="small" onclick="window.location.href='{{ 'news/downloads'|page }}'">Alle Downloads</button>
+
+    </section><section class="sidebarelement">
+        <h3>Informationen</h3>
+        <!-- load infos -->
+        <button class="small" onclick="window.location.href='{{ 'pfadiheim/belegung'|page }}'">Belegungsplan</button>
+
+    </section>
+</aside>";}";

@@ -1,0 +1,11 @@
+1443978517s:584:"a:7:{s:5:"mtime";i:1443977866;s:7:"content";s:118:"{% put head %}
+    <link href="css/theme.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+{% endput %}
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:117:"{% put head %}
+    <link href="css/theme.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+{% endput %}";s:13:"parsed-markup";s:165:"{% put head %}
+    &lt;link href=&quot;css/theme.css&quot; rel=&quot;stylesheet&quot;&gt;
+    &lt;script src=&quot;js/script.js&quot;&gt;&lt;/script&gt;
+{% endput %}";}";

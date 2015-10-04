@@ -1,0 +1,12 @@
+1443978517s:527:"a:6:{s:5:"mtime";i:1443977866;s:7:"content";s:187:"<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; 2013 - {{ "now"|date("Y") }} Alexey Bobkov &amp; Samuel Georges.</p>
+    </div>
+</div>
+";s:7:"viewBag";a:0:{}s:8:"settings";a:1:{s:10:"components";a:0:{}}s:4:"code";N;s:6:"markup";s:186:"<div id="footer">
+    <div class="container">
+        <hr />
+        <p class="muted credit">&copy; 2013 - {{ "now"|date("Y") }} Alexey Bobkov &amp; Samuel Georges.</p>
+    </div>
+</div>";}";

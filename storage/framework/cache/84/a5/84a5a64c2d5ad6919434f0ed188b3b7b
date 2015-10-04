@@ -1,0 +1,543 @@
+1443979387s:26463:"a:6:{s:5:"mtime";i:1443977373;s:7:"content";s:13147:"title = "Home"
+url = "/"
+hidden = "0"
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/index.css');
+    $this->addCss('assets/tools/royalslider/royalslider.css');
+    $this->addCss('assets/tools/royalslider/skins/minimal-white/rs-minimal-white.css');
+    
+    $this->addJs('assets/tools/royalslider/jquery.royalslider.min.js');
+}
+?>
+==
+<!doctype html>
+
+<!--[if lt IE 9]>
+    <html class="ie8">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+    <!--<![endif]-->
+    {% partial "head" %}
+    
+    <body class="hidden">
+        <header id="main_header" class="no_select parallax" data-container-height="1000" data-image="{{'assets/images/orion_title.jpg'|theme }}" data-with="1600" data-height="1200" data-posy="0">
+            <nav id="big_nav" style="position: fixed">
+                <ul>
+                    <li>
+                        <a href="{{ 'home'|page }}">Orion</a>
+                    </li><li>
+                        <a href="{{ 'news'|page }}">News</a>
+                    </li><li class="logo">
+                        {% partial "big_scout_lily" %}
+                    </li><li>
+                        <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                    </li><li>
+                        <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>     
+            <nav id="small_nav">
+                <ul>
+                    <li>
+                        <a href="{{ 'home'|page }}">Orion</a>
+                    </li><li>
+                        <a href="{{ 'news'|page }}">News</a>
+                    </li><li class="logo">
+                        {% partial "small_scout_lily" %}
+                    </li><li>
+                        <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                    </li><li>
+                        <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </nav> 
+            {% partial "tablet_nav" %}
+
+            <div id="top_title">
+                <h1>Pfadi Orion</h1>
+                <a id="orion_location" href="https://www.google.com/maps/place/Rickenbach+sulz" target="blank">
+                    <div id="orion_location">
+                        <p>Rickenbach Sulz / Wiesendangen</p>
+                    </div> 
+                </a>                     
+                <h2 style="cursor: pointer;">Erfahre mehr über uns</h2>   
+                <h2 style="margin-top: -30px;font-size: 70px; text-align: center; cursor: pointer;">v</h2>
+            </div>
+                
+        </header>
+        
+        <div id="main-container">
+        
+        
+            <!-- unsere Abteilung -->
+            <section id="about_us">
+                <div id="about_us_image">
+                    <img src="{{ 'assets/images/wer_wir_sind.jpg'|theme }}" />
+                </div><div id="about_us_content">
+                    <h2>Das sind wir</h2>
+                    <p>Wir sind, Wölfli, Pfader, Pios und Rover! Wir lieben Action und Abenteuer! Wir sind die Pfadiabteilung Orion!</p>
+            
+                    <p>Die gesamte Abteilung besteht aus ca. 50 Kindern und Jugendlichen im Alter von 6 
+                        bis 16 Jahren, sowie etwas mehr als 20 Leiter und Leiterinnen, die den Kids Samstag 
+                        für Samstag Programm in der freien Natur bieten. Die Abteilung Orion ist der Region 
+                        Winterthur angehörig.</p>
+            
+                    <p>Wir geben uns sehr Mühe, den Kindern und Jugendlichen in unserer Abteilung ein 
+                        abwechslungsreiches Programm zu bieten, bei dem sie einerseits die Natur näher 
+                        kennenlernen, anderseits aber auch die Gesellschaft untereinander nicht zu kurz 
+                        kommt. Wer zu uns in die Pfadi kommt, dem wird bestimmt nie langweilig!</p>
+                </div>
+            </section><!-- Eindrücke -->
+            <section id="impressions">
+                <h2>Eindrücke</h2>
+                <div id="impressions_slider" class="royalSlider rsMinW">
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/5_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/5.jpg'|theme }}">SoLa 2012</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/2_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/2.jpg'|theme }}">HeLa 2013</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/3_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/3.jpg'|theme }}">PfiLa 2012</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/4_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/4.jpg'|theme }}">Schauenbergtippel 2013</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/1_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/1.jpg'|theme }}">HeLa 2013</a>
+                </div>
+                <div id="impressions_slider_fullscreen" class="no_select">
+                    Vollbild
+                </div>
+            </section>
+            <!-- was ist Pfadi -->
+            <section id="whats_scouts">
+                <h2>Was ist Pfadi?</h2>
+                <div>
+                    <p>Die Pfadi ist ein weltweiter religiös und politisch unabhängiger Verband mit dem Ziel, 
+                        junge Menschen bei ihrer Entwicklung zu fördern, damit diese in der Gesellschaft Verantwortung übernehmen können. </p>
+                    <p>Die Pfadibewegung Schweiz (PBS) ist mit über 40'000 Mitgliedern die grösste Jugendorganisation hierzulande. 
+                        Sie ist in 22 kantonalen Verbänden und rund 600 lokalen Abteilungen und Gruppen organisiert.</p>
+                    <p>Mehr Infos und Eindrücke zur Pfadi findest du hier: </p>
+                    <a href="http://www.pfadi.ch/" target="_blank">Pfadi.ch</a>
+                </div>
+            </section>
+            <!-- unsere Organisation -->
+            <section id="organigramm">
+                <h2>Unsere Organisation</h2>
+                <div class="g-100">
+                    {% partial "pfadi_organigramm" %}
+                </div>
+            </section>
+            <!-- unsere Organisation -->
+            <section id="join_us">
+                <h2>Besuche uns</h2>
+                <div id="join_us_text">
+                    <p>
+                        Hast du Lust und Zeit regelmässig am Samstag die Natur auf eine andere Art zu erleben? 
+            
+                        Möchtest du bräteln, Geschichten und Action erleben? Über Seilbrücken laufen und 
+            
+                        Pfeilbogen basteln? – Dann bist du bei uns genau richtig! </p>
+                    <p>
+            
+                        Komm doch einfach mal vorbei und schau wie's dir gefällt, ganz unverbindlich.</p>
+                    <p>
+                        Wenn es dir dann gefallen hat, darfst du gerne in unserem "Download"-Bereich die 
+            
+                        Anmeldung downloaden, ausfüllen und an uns zurücksenden.</p>
+                    <p>
+                        Bei Fragen stehen dir unsere Trupp- und Abteilungsleiter gerne zur Verfügung.
+                    </p>
+                    <!--<a id="join_us_button" class="no_select" href="{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}">Anmelden</a>
+                    <div id="contact_us_button" class="no_select" onclick="(function() {
+                                window.location.href = "{{ 'kontakt'|page }}";
+                            })();">Kontakt</div>-->
+                    
+                    <button id="join_us_button" onclick="window.location.href = '{{ 'assets/download/Anmeldeformular_Pfadi_Orion.pdf'|theme }}'">Anmelden</button> 
+                    <button id="contact_us_button" onclick="window.location.href = '{{ 'kontakt'|page }}'">Kontakt</button>
+                    
+                </div>
+            </section>
+
+        </div>
+        
+        <div id="footer">
+            <div id="footer_top">
+                <div class="footer_top_element left">
+                    <h3>Übersicht</h3>
+                    <ul>
+                        <li>
+                            <a href="{{ 'home'|page }}">Hauptseite</a>
+                        </li>
+                        <li>
+                            <a href="{{ 'news'|page }}">News</a>
+                            <ul>
+                                <li style="margin: 0 0 0 10px;list-style-type: disc;"><a href="{{ 'news/kalender'|page }}">Kalender</a></li>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'news/downloads'|page }}">Downloads</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                            <ul>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'pfadiheim/belegung'|page }}">Belegungsplan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_top_element middle">
+                        {% partial "small_scout_lily" %}
+                    <p>Allzeit Bereit!</p>
+                </div>
+                <div class="footer_top_element right">
+                    <h3>Nützliche Links</h3>
+                    <ul>
+                        <li>
+                            <a href="http://www.pfadiwinti.ch/">Pfadi Region Winterthur (PRW)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.pbs.ch/de/verband/">Pfadibewegung Schweiz (PBS)</a>
+                        </li>
+                    </ul>             
+                </div>
+            </div>
+            <div id="footer_bottom">
+                <div class="footer_bottom_element left">
+                    <a href="{{ 'kontakt/impressum'|page }}">Impressum</a>
+                </div>
+                <div class="footer_bottom_element middle">
+                    <p><a href="{{ 'home'|page }}">Pfadi Orion</a> © <?php echo date("Y"); ?></p>
+                </div>
+                <div class="footer_bottom_element right">
+                    <a href="{{ 'backend'|page }}">Login</a>
+                </div>
+            </div>
+        </div>
+        {% scripts %}
+        
+        <script>
+            var winHeight = $(window).height();
+        
+            $('#impressions_slider_fullscreen').on('click', function() {
+                $('#impressions_slider').royalSlider('enterFullscreen');
+            });
+            $('#impressions_slider').royalSlider({
+                fullscreen: {
+                    enabled: true,
+                    nativeFS: false
+                },
+                controlNavigation: 'bullets',
+                arrowsNav: true,
+                keyboardNavEnabled: true,
+                autoScaleSlider: true,
+                autoScaleSliderWidth: 1400,
+                autoScaleSliderHeight: 600,
+                imageScaleMode: 'fill',
+                globalCaption: true,
+                arrowsNavAutoHide: false,
+                imgWidth: 1400,
+                imgHeight: 933
+            });
+            
+            $('#main_header')
+                .height(winHeight)
+                .data('container-height', winHeight)
+                .parallax({
+                    parallax: 0.6
+                });
+                
+            $('body').on('click', '#top_title h2', function(evt) {
+                evt.preventDefault();
+                $('body, html').animate({
+                    scrollTop: $('#main-container').offset().top
+                }, {
+                    duration: 1500,
+                    queue: false,
+                    easing: 'easeInOutQuart'
+                });
+            });
+                
+            $(window).on('resize', function() {
+                winHeight = $(window).height();
+                
+                if($(window).width() > 360){
+                    console.log("test");
+                    $('#main_header').data('container-height', winHeight);                
+                    $('#main_header, .parallax-container').height(winHeight);
+                }
+            });
+        
+            function organigramm() {
+                $('#org_elem').hover(function() {
+                    $(this).attr('style', 'filter:url(#dropshadow_org)');
+                });
+            }
+        </script>
+    </body>
+</html>";s:7:"viewBag";a:0:{}s:8:"settings";a:4:{s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"hidden";s:1:"0";s:10:"components";a:0:{}}s:4:"code";s:304:"
+function onStart()
+{
+    $this->addCss('assets/css/index.css');
+    $this->addCss('assets/tools/royalslider/royalslider.css');
+    $this->addCss('assets/tools/royalslider/skins/minimal-white/rs-minimal-white.css');
+    
+    $this->addJs('assets/tools/royalslider/jquery.royalslider.min.js');
+}
+";s:6:"markup";s:12785:"<!doctype html>
+
+<!--[if lt IE 9]>
+    <html class="ie8">
+<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html>
+    <!--<![endif]-->
+    {% partial "head" %}
+    
+    <body class="hidden">
+        <header id="main_header" class="no_select parallax" data-container-height="1000" data-image="{{'assets/images/orion_title.jpg'|theme }}" data-with="1600" data-height="1200" data-posy="0">
+            <nav id="big_nav" style="position: fixed">
+                <ul>
+                    <li>
+                        <a href="{{ 'home'|page }}">Orion</a>
+                    </li><li>
+                        <a href="{{ 'news'|page }}">News</a>
+                    </li><li class="logo">
+                        {% partial "big_scout_lily" %}
+                    </li><li>
+                        <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                    </li><li>
+                        <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </nav>     
+            <nav id="small_nav">
+                <ul>
+                    <li>
+                        <a href="{{ 'home'|page }}">Orion</a>
+                    </li><li>
+                        <a href="{{ 'news'|page }}">News</a>
+                    </li><li class="logo">
+                        {% partial "small_scout_lily" %}
+                    </li><li>
+                        <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                    </li><li>
+                        <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                    </li>
+                </ul>
+            </nav> 
+            {% partial "tablet_nav" %}
+
+            <div id="top_title">
+                <h1>Pfadi Orion</h1>
+                <a id="orion_location" href="https://www.google.com/maps/place/Rickenbach+sulz" target="blank">
+                    <div id="orion_location">
+                        <p>Rickenbach Sulz / Wiesendangen</p>
+                    </div> 
+                </a>                     
+                <h2 style="cursor: pointer;">Erfahre mehr über uns</h2>   
+                <h2 style="margin-top: -30px;font-size: 70px; text-align: center; cursor: pointer;">v</h2>
+            </div>
+                
+        </header>
+        
+        <div id="main-container">
+        
+        
+            <!-- unsere Abteilung -->
+            <section id="about_us">
+                <div id="about_us_image">
+                    <img src="{{ 'assets/images/wer_wir_sind.jpg'|theme }}" />
+                </div><div id="about_us_content">
+                    <h2>Das sind wir</h2>
+                    <p>Wir sind, Wölfli, Pfader, Pios und Rover! Wir lieben Action und Abenteuer! Wir sind die Pfadiabteilung Orion!</p>
+            
+                    <p>Die gesamte Abteilung besteht aus ca. 50 Kindern und Jugendlichen im Alter von 6 
+                        bis 16 Jahren, sowie etwas mehr als 20 Leiter und Leiterinnen, die den Kids Samstag 
+                        für Samstag Programm in der freien Natur bieten. Die Abteilung Orion ist der Region 
+                        Winterthur angehörig.</p>
+            
+                    <p>Wir geben uns sehr Mühe, den Kindern und Jugendlichen in unserer Abteilung ein 
+                        abwechslungsreiches Programm zu bieten, bei dem sie einerseits die Natur näher 
+                        kennenlernen, anderseits aber auch die Gesellschaft untereinander nicht zu kurz 
+                        kommt. Wer zu uns in die Pfadi kommt, dem wird bestimmt nie langweilig!</p>
+                </div>
+            </section><!-- Eindrücke -->
+            <section id="impressions">
+                <h2>Eindrücke</h2>
+                <div id="impressions_slider" class="royalSlider rsMinW">
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/5_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/5.jpg'|theme }}">SoLa 2012</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/2_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/2.jpg'|theme }}">HeLa 2013</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/3_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/3.jpg'|theme }}">PfiLa 2012</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/4_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/4.jpg'|theme }}">Schauenbergtippel 2013</a>
+                    <a class="rsImg" data-rsBigImg="{{ 'assets/images/impressions_gallery/1_big.jpg'|theme }}" href="{{ 'assets/images/impressions_gallery/1.jpg'|theme }}">HeLa 2013</a>
+                </div>
+                <div id="impressions_slider_fullscreen" class="no_select">
+                    Vollbild
+                </div>
+            </section>
+            <!-- was ist Pfadi -->
+            <section id="whats_scouts">
+                <h2>Was ist Pfadi?</h2>
+                <div>
+                    <p>Die Pfadi ist ein weltweiter religiös und politisch unabhängiger Verband mit dem Ziel, 
+                        junge Menschen bei ihrer Entwicklung zu fördern, damit diese in der Gesellschaft Verantwortung übernehmen können. </p>
+                    <p>Die Pfadibewegung Schweiz (PBS) ist mit über 40'000 Mitgliedern die grösste Jugendorganisation hierzulande. 
+                        Sie ist in 22 kantonalen Verbänden und rund 600 lokalen Abteilungen und Gruppen organisiert.</p>
+                    <p>Mehr Infos und Eindrücke zur Pfadi findest du hier: </p>
+                    <a href="http://www.pfadi.ch/" target="_blank">Pfadi.ch</a>
+                </div>
+            </section>
+            <!-- unsere Organisation -->
+            <section id="organigramm">
+                <h2>Unsere Organisation</h2>
+                <div class="g-100">
+                    {% partial "pfadi_organigramm" %}
+                </div>
+            </section>
+            <!-- unsere Organisation -->
+            <section id="join_us">
+                <h2>Besuche uns</h2>
+                <div id="join_us_text">
+                    <p>
+                        Hast du Lust und Zeit regelmässig am Samstag die Natur auf eine andere Art zu erleben? 
+            
+                        Möchtest du bräteln, Geschichten und Action erleben? Über Seilbrücken laufen und 
+            
+                        Pfeilbogen basteln? – Dann bist du bei uns genau richtig! </p>
+                    <p>
+            
+                        Komm doch einfach mal vorbei und schau wie's dir gefällt, ganz unverbindlich.</p>
+                    <p>
+                        Wenn es dir dann gefallen hat, darfst du gerne in unserem "Download"-Bereich die 
+            
+                        Anmeldung downloaden, ausfüllen und an uns zurücksenden.</p>
+                    <p>
+                        Bei Fragen stehen dir unsere Trupp- und Abteilungsleiter gerne zur Verfügung.
+                    </p>
+                    <!--<a id="join_us_button" class="no_select" href="{{ 'assets/download/Anmeldeformular Pfadi Orion.pdf'|page }}">Anmelden</a>
+                    <div id="contact_us_button" class="no_select" onclick="(function() {
+                                window.location.href = "{{ 'kontakt'|page }}";
+                            })();">Kontakt</div>-->
+                    
+                    <button id="join_us_button" onclick="window.location.href = '{{ 'assets/download/Anmeldeformular_Pfadi_Orion.pdf'|theme }}'">Anmelden</button> 
+                    <button id="contact_us_button" onclick="window.location.href = '{{ 'kontakt'|page }}'">Kontakt</button>
+                    
+                </div>
+            </section>
+
+        </div>
+        
+        <div id="footer">
+            <div id="footer_top">
+                <div class="footer_top_element left">
+                    <h3>Übersicht</h3>
+                    <ul>
+                        <li>
+                            <a href="{{ 'home'|page }}">Hauptseite</a>
+                        </li>
+                        <li>
+                            <a href="{{ 'news'|page }}">News</a>
+                            <ul>
+                                <li style="margin: 0 0 0 10px;list-style-type: disc;"><a href="{{ 'news/kalender'|page }}">Kalender</a></li>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'news/downloads'|page }}">Downloads</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'pfadiheim'|page }}">Pfadiheim</a>
+                            <ul>
+                                <li style="margin: 0 0 5px 10px;list-style-type: disc;"><a href="{{ 'pfadiheim/belegung'|page }}">Belegungsplan</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ 'kontakt'|page }}">Kontakt</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer_top_element middle">
+                        {% partial "small_scout_lily" %}
+                    <p>Allzeit Bereit!</p>
+                </div>
+                <div class="footer_top_element right">
+                    <h3>Nützliche Links</h3>
+                    <ul>
+                        <li>
+                            <a href="http://www.pfadiwinti.ch/">Pfadi Region Winterthur (PRW)</a>
+                        </li>
+                        <li>
+                            <a href="http://www.pbs.ch/de/verband/">Pfadibewegung Schweiz (PBS)</a>
+                        </li>
+                    </ul>             
+                </div>
+            </div>
+            <div id="footer_bottom">
+                <div class="footer_bottom_element left">
+                    <a href="{{ 'kontakt/impressum'|page }}">Impressum</a>
+                </div>
+                <div class="footer_bottom_element middle">
+                    <p><a href="{{ 'home'|page }}">Pfadi Orion</a> © <?php echo date("Y"); ?></p>
+                </div>
+                <div class="footer_bottom_element right">
+                    <a href="{{ 'backend'|page }}">Login</a>
+                </div>
+            </div>
+        </div>
+        {% scripts %}
+        
+        <script>
+            var winHeight = $(window).height();
+        
+            $('#impressions_slider_fullscreen').on('click', function() {
+                $('#impressions_slider').royalSlider('enterFullscreen');
+            });
+            $('#impressions_slider').royalSlider({
+                fullscreen: {
+                    enabled: true,
+                    nativeFS: false
+                },
+                controlNavigation: 'bullets',
+                arrowsNav: true,
+                keyboardNavEnabled: true,
+                autoScaleSlider: true,
+                autoScaleSliderWidth: 1400,
+                autoScaleSliderHeight: 600,
+                imageScaleMode: 'fill',
+                globalCaption: true,
+                arrowsNavAutoHide: false,
+                imgWidth: 1400,
+                imgHeight: 933
+            });
+            
+            $('#main_header')
+                .height(winHeight)
+                .data('container-height', winHeight)
+                .parallax({
+                    parallax: 0.6
+                });
+                
+            $('body').on('click', '#top_title h2', function(evt) {
+                evt.preventDefault();
+                $('body, html').animate({
+                    scrollTop: $('#main-container').offset().top
+                }, {
+                    duration: 1500,
+                    queue: false,
+                    easing: 'easeInOutQuart'
+                });
+            });
+                
+            $(window).on('resize', function() {
+                winHeight = $(window).height();
+                
+                if($(window).width() > 360){
+                    console.log("test");
+                    $('#main_header').data('container-height', winHeight);                
+                    $('#main_header, .parallax-container').height(winHeight);
+                }
+            });
+        
+            function organigramm() {
+                $('#org_elem').hover(function() {
+                    $(this).attr('style', 'filter:url(#dropshadow_org)');
+                });
+            }
+        </script>
+    </body>
+</html>";}";
